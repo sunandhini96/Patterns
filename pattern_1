@@ -1,0 +1,9 @@
+def print_pascals_triangle(n):
+    for line in range(n):
+        # First number in each line is always 1
+        num = 1
+        for i in range(line + 1):
+            print(num, end=' ')
+            num = num * (line - i) // (i + 1)
+        print()
+print_pascals_triangle(5)
